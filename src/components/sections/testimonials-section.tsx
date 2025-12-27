@@ -31,7 +31,7 @@ const testimonials: Testimonial[] = [
     text: "A truly great experience! Their amazing management team is available 24/7 to listen to every requirement. They are the best at providing top-tier solutions. I loved working with them and the exceptional service provided.",
   },
   {
-    name: 'Rohit',
+    name: 'Rohit Manna',
     time: '6 months ago',
     rating: 5,
     text: "Fully satisfied with the custom logo design. It perfectly captures our brand identity. Highly recommended.",

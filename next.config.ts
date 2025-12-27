@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+import type { NextConfig } from "next";
+
+>>>>>>> Stashed changes
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [

@@ -135,7 +135,7 @@ const Footer = () => {
             </footer>
 
 
-            <div className="fixed bottom-5 left-5 z-50">
+            {/* <div className="fixed bottom-5 left-5 z-50">
                 <Image
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/whatsapp-66.png"
                     alt="WhatsApp"
@@ -144,7 +144,7 @@ const Footer = () => {
                     unoptimized
                     className="hover:scale-110 transition-transform"
                 />
-            </div>
+            </div> */}
 
             {isVisible && (
                 <Button
