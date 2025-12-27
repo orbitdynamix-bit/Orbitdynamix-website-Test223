@@ -89,7 +89,7 @@ const WhyChooseUsSection = () => {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-4 text-center lg:text-left">
-            <h2 className="font-display text-[56px] md:text-[72px] font-extrabold leading-[1.1] text-white tracking-[-0.02em]">
+            <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 text-text-primary-darkont-display text-[56px] md:text-[72px] font-extrabold leading-[1.1] text-white tracking-[-0.02em]">
               Why<br />
               <span
                 className="animate-gradient"

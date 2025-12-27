@@ -98,7 +98,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
         )}
         <p className="text-sm mt-1" style={{ color: 'var(--color-text-secondary-dark)' }}>{testimonial.time}</p>
       </div>
-      <StarRating rating={testimonial.rating}/>
+      <StarRating rating={testimonial.rating} />
     </div>
   </div>
 );
