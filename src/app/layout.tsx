@@ -26,7 +26,7 @@ export default function RootLayout({
           data-include-search-params="true"
           data-only-in-iframe="true"
           data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
+          data-custom-data='{"appName": "OrbitDynamix", "version": "1.0.0", "greeting": "hi"}'
         />
         {children}
 
