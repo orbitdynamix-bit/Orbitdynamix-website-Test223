@@ -87,10 +87,10 @@ const WhyChooseUsSection = () => {
   return (
     <section className="bg-background-secondary py-24 lg:py-32" >
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-4 text-center lg:text-left">
-            <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 text-text-primary-darkont-display text-[56px] md:text-[72px] font-extrabold leading-[1.1] text-white tracking-[-0.02em]">
-              Why<br />
+            <h2 className="text-center flex justify-center items-center lg:flex-col gap-3 lg:gap-0 text-4xl md:text-5xl lg:text-[72px] font-bold mb-16 text-text-primary font-display font-extrabold leading-[1.1] text-white tracking-[-0.02em]">
+              Why
               <span
                 className="animate-gradient"
                 style={{
@@ -98,14 +98,10 @@ const WhyChooseUsSection = () => {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                }}>Choose</span><br />
+                }}>Choose</span>
               <span
-                className="animate-gradient"
                 style={{
-                  background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: 'white',
                 }}>Us</span>
             </h2>
           </div>

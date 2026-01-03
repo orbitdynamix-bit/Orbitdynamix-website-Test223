@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
   return (
     <section className="bg-[#f5f5f5] py-24" style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-5xl font-bold mb-16">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-16">
           <span className="text-white">Client</span> <span
             className="animate-gradient font-urbanist"
             style={{

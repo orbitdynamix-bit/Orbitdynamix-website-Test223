@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Particles from "../ui/particles";
 import GlareHover from "../ui/glare-hover";
+import SplineViewer from "../ui/spline-viewer";
 
 const HeroSection = () => {
   const designDevIcons = [
@@ -92,8 +93,11 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="hidden lg:block w-full h-[300px] relative">
-            {/* Right side content if any */}
+          <div className="hidden lg:block w-full h-[500px] xl:h-[600px] relative">
+            <SplineViewer
+              sceneUrl="https://my.spline.design/astronaut-ibUms6tdzEq8kLJKqhNUIwYJ/"
+              className="w-full h-full"
+            />
           </div>
         </div>
       </div>
