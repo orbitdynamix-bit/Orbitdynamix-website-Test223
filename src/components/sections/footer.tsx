@@ -68,7 +68,15 @@ const Footer = () => {
                 <div className="container py-12 md:py-24 px-4">
                     <div className="flex flex-col md:flex-row flex-wrap justify-between gap-8">
                         <div className="w-full md:w-auto">
-                            <h1 className="text-lg font-semibold text-white mb-6">OrbitDynamix</h1>
+                            <div className="mb-6">
+                                <Image
+                                    src="/images/logo.png"
+                                    alt="OrbitDynamix"
+                                    width={150}
+                                    height={40}
+                                    className="object-contain"
+                                />
+                            </div>
                             <div className="mt-8 md:mt-16 flex items-center gap-6 flex-wrap">
                                 {socialLinks.map((social) => (
                                     <a
