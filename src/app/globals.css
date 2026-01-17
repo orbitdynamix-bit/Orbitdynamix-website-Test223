@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
 /* Updated: 2025-10-13T19:03:35.325Z */
 /* Updated: 2025-10-13T19:03:30.060Z */
 /* Updated: 2025-10-13T18:47:43.086Z */
@@ -14,11 +18,6 @@
 /* Updated: 2025-10-11T11:49:37.249Z */
 /* Updated: 2025-10-11T11:49:32.956Z */
 /* Updated: 2025-10-11T11:33:45.889Z */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
-
-@import "tailwindcss";
-@import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
 @theme {

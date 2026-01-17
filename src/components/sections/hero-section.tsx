@@ -20,7 +20,6 @@ const HeroSection = () => {
     { src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/adwords-11.png?", alt: "Google Ads" },
     { src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/facebook-13.png?", alt: "Facebook Ads" },
     { src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/instagram-1-14.png?", alt: "Instagram Ads" },
-    { src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/instagram-1-14.png?", alt: "Instagram Ads" },
     { src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/812d8f19-2da5-4a6c-9960-62a57cc52b3f-onqanet-com/assets/icons/twitter-15.png?", alt: "Twitter Ads" },
   ];
 
@@ -33,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative text-white pt-64 lg:pt-60 lg:pb-40 xl:pt-96 xl:pb-72 overflow-hidden min-h-screen"
+      className="relative text-white pt-64 lg:pt-60 lg:pb-40 xl:pt-96 xl:pb-72 overflow-x-clip min-h-screen"
       style={{
         background: "radial-gradient(80% 60% at 50% 0%, #F2E9FF 0%, #C9A6FF 25%, #8B5CF6 45%, #5B21B6 65%, #000000 100%)",
         paddingTop: 'calc(var(--spacing, 1rem) * 52)',
@@ -54,7 +53,7 @@ const HeroSection = () => {
         />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-[1fr_0.9fr] gap-x-12 gap-y-16">
+        <div className="grid lg:w-1/2 xl:w-1/2 gap-x-12 gap-y-16 overflow-visible">
           <div className="relative z-10">
             <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em]">
               Empowering <span style={{
@@ -93,13 +92,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="hidden lg:block w-full h-[500px] xl:h-[600px] relative">
-            <SplineViewer
-              sceneUrl="https://my.spline.design/astronaut-ibUms6tdzEq8kLJKqhNUIwYJ/"
-              className="w-full h-full"
-            />
           </div>
-        </div>
       </div>
     </section>
   );

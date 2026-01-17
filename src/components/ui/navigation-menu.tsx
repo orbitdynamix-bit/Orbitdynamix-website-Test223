@@ -9,9 +9,11 @@ function NavigationMenu({
   className,
   children,
   viewport = true,
+  viewportClassName,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
   viewport?: boolean
+  viewportClassName?: string
 }) {
   return (
     <NavigationMenuPrimitive.Root
@@ -24,7 +26,7 @@ function NavigationMenu({
       {...props}
     >
       {children}
-      {viewport && <NavigationMenuViewport />}
+      {viewport && <NavigationMenuViewport className={viewportClassName} />}
     </NavigationMenuPrimitive.Root>
   )
 }
@@ -104,20 +106,22 @@ function NavigationMenuViewport({
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
   return (
-    <div
-      className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center"
-      )}
-    >
-      <NavigationMenuPrimitive.Viewport
-        data-slot="navigation-menu-viewport"
+    <NavigationMenuPortal>
+      <div
         className={cn(
-          "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
-          className
+          "fixed top-0 left-0 right-0 isolate z-50 flex justify-center pointer-events-none"
         )}
-        {...props}
-      />
-    </div>
+      >
+        <NavigationMenuPrimitive.Viewport
+          data-slot="navigation-menu-viewport"
+          className={cn(
+            "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-[100px] h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)] pointer-events-auto",
+            className
+          )}
+          {...props}
+        />
+      </div>
+    </NavigationMenuPortal>
   )
 }
 
@@ -155,6 +159,15 @@ function NavigationMenuIndicator({
   )
 }
 
+import { createPortal } from "react-dom"
+
+const NavigationMenuPortal = ({ children }: { children: React.ReactNode }) => {
+  const [mounted, setMounted] = React.useState(false)
+  React.useEffect(() => setMounted(true), [])
+  if (!mounted) return null
+  return createPortal(children, document.body)
+}
+
 export {
   NavigationMenu,
   NavigationMenuList,
@@ -164,5 +177,6 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport,
+  NavigationMenuPortal,
   navigationMenuTriggerStyle,
 }

@@ -110,7 +110,7 @@ const ExpertiseDetails = () => {
         {/* ScrollTrigger Wrapper */}
         <div ref={triggerRef} className="w-full relative h-auto lg:h-[70vh] flex items-center">
           {/* Moving Container */}
-          <div ref={sectionRef} className="flex flex-col lg:flex-row w-full lg:w-max h-auto lg:h-full items-center gap-12 lg:gap-16 px-4 md:px-0">
+          <div ref={sectionRef} className="flex flex-col lg:flex-row w-full lg:w-max h-auto lg:h-full items-center gap-12 lg:gap-16 px-2 md:px-0">
             {expertiseData.map((service, index) => (
               <div
                 key={index}

@@ -33,7 +33,7 @@ const ContactSection = () => {
     return (
         <section className="bg-[#f5f5f5] pt-0 pb-40 lg:pb-48" style={{ backgroundColor: "var(--color-background-primary)" }}>
             <div className="container px-0 mx-auto max-w-[1400px]">
-                <div className="flex flex-col lg:flex-row rounded-3xl translate-y-20 gap-y-6">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center rounded-3xl translate-y-20 gap-y-6">
                     <div className="w-10/12 mx-auto lg:w-[35%] lg:mx-0 bg-[#f5f5f5] p-6 md:p-10 text-[#1A1A1A] relative z-20 shadow-2xl rounded-3xl h-fit lg:self-center lg:-mr-16">
                         <h2 className="text-3xl font-bold mb-4 text-black">Contact Information</h2>
                         <p className="font-urbanist text-gray-600 mb-12">Fill up the form to get in touch with us</p>
@@ -62,7 +62,7 @@ const ContactSection = () => {
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                     <div className="w-10/12 mx-auto lg:w-[65%] lg:mx-0 bg-[#DBDBDB] p-6 md:p-10 lg:pl-24 rounded-3xl relative z-10">
