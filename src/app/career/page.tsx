@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import HeaderNavigation from '@/components/sections/header-navigation';
 import Footer from '@/components/sections/footer';
 
@@ -17,14 +16,14 @@ const App = () => {
           Join our team and grow with Onqanet Technologies.
         </p>
 
-        <div className="text-center mb-16">
-          <DotLottieReact
-            src="https://lottie.host/82672441-c8b7-460e-99e0-aa5772ccccbc/FH2suqHh81.lottie"
-            loop
-            autoplay
+        <div className="text-center mb-16 mt-16">
+          <img
+            src="/images/chill_guy.png"
+            className="mx-auto h-80 w-auto"
+            alt=""
           />
           <p className="text-center text-lg text-muted-foreground mb-8">
-            Well... this is awkward. The page you're looking for doesn't exist.
+            Tujhe kya job dunga..main khud unemployed hoon.
           </p>
         </div>
       </main>
