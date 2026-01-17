@@ -202,7 +202,7 @@ export default function HeaderNavigation() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="size-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#1A1A1A] border-l border-border p-0 w-full sm:w-[350px]">
@@ -211,7 +211,7 @@ export default function HeaderNavigation() {
                     <Image
                       src="/images/logo.png"
                       alt="OrbitDynamix Logo"
-                      width={100}
+                      width={150}
                       height={100}
                     />
                   </SheetTitle>
@@ -220,10 +220,10 @@ export default function HeaderNavigation() {
                   <Accordion type="single" collapsible className="w-full">
                     {navItems.map((item) => item.children ? (
                       <AccordionItem value={item.label} key={item.label} className="border-b border-white/10">
-                        <AccordionTrigger className="py-4 text-white hover:no-underline font-urbanist">{item.label}</AccordionTrigger>
+                        <AccordionTrigger className="py-4 text-white hover:no-underline font-urbanist text-lg">{item.label}</AccordionTrigger>
                         <AccordionContent className="pl-4">
                           {item.children.map((child: any) => (
-                            <Link key={child.label} href={child.href} className="block py-2 text-muted-foreground hover:text-white font-urbanist">
+                            <Link key={child.label} href={child.href} className="block py-2 text-muted-foreground hover:text-white font-urbanist text-base">
                               {child.label}
                             </Link>
                           ))}

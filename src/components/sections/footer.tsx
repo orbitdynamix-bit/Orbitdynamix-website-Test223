@@ -74,7 +74,8 @@ const Footer = () => {
                                     alt="OrbitDynamix"
                                     width={150}
                                     height={40}
-                                    className="object-contain"
+                                    className="object-contain h-22 w-auto"
+                                    unoptimized
                                 />
                             </div>
                             <div className="mt-8 md:mt-16 flex items-center gap-6 flex-wrap">
