@@ -4,7 +4,7 @@ import PortfolioShowcase from '@/components/sections/portfolio-showcase';
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#0d0d0d]">
       <HeaderNavigation />
       <main className="pt-32">
         <PortfolioShowcase />

@@ -1,7 +1,11 @@
+"use client";
+
+import React from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import HeaderNavigation from '@/components/sections/header-navigation';
 import Footer from '@/components/sections/footer';
 
-export default function CareerPage() {
+const App = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeaderNavigation />
@@ -12,8 +16,23 @@ export default function CareerPage() {
         <p className="text-lg text-muted-foreground">
           Join our team and grow with Onqanet Technologies.
         </p>
+
+        <div className="text-center mb-16">
+          <DotLottieReact
+            src="https://lottie.host/82672441-c8b7-460e-99e0-aa5772ccccbc/FH2suqHh81.lottie"
+            loop
+            autoplay
+          />
+          <p className="text-center text-lg text-muted-foreground mb-8">
+            Well... this is awkward. The page you're looking for doesn't exist.
+          </p>
+        </div>
       </main>
       <Footer />
     </div>
   );
+};
+
+export default function CareerPage() {
+  return <App />;
 }

@@ -9,7 +9,6 @@ export default function TestimonialsPage() {
       <HeaderNavigation />
       <main className="pt-32">
         <TestimonialsSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
