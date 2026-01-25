@@ -68,9 +68,9 @@ const serviceLinks = [
     description: "With our all-inclusive E-Commerce solutions, you may improve your online business.",
   },
   {
-    href: "/services/logo-design",
+    href: "/services/support",
     label: "Support",
-    description: "Make a lasting impression with a unique and memorable Logo Design.",
+    description: "Reliable and responsive support to ensure your business runs smoothly.",
   },
 
 ];

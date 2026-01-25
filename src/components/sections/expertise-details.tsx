@@ -1,12 +1,6 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-
-
-gsap.registerPlugin(ScrollTrigger);
+import InfiniteMenu from "@/components/ui/infinite-menu";
 
 const expertiseData = [
   {
@@ -47,6 +41,13 @@ const expertiseData = [
   },
 ];
 
+const menuItems = expertiseData.map(service => ({
+  image: service.image,
+  title: service.title,
+  description: service.items[0], // Using first item as a short description
+  link: "#"
+}));
+
 const ExpertiseListItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start">
     <Image
@@ -55,44 +56,12 @@ const ExpertiseListItem = ({ children }: { children: React.ReactNode }) => (
       width={16}
       height={16}
       className="w-4 h-4 mr-4 mt-1 flex-shrink-0"
-    // style={{ filter: "brightness(0) invert(1)" }} // Optional: ensure white icon if needed
     />
     <span className="text-base text-white">{children}</span>
   </li>
 );
 
 const ExpertiseDetails = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const trigger = triggerRef.current;
-    const section = sectionRef.current;
-
-    if (!trigger || !section) return;
-
-    let ctx = gsap.context(() => {
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 1024px)", () => {
-        gsap.to(section, {
-          x: () => -(section.scrollWidth - window.innerWidth),
-          ease: "none",
-          scrollTrigger: {
-            trigger: trigger,
-            pin: true,
-            scrub: 1,
-            start: "top top",
-            end: () => "+=" + (section.scrollWidth - window.innerWidth),
-            invalidateOnRefresh: true,
-          },
-        });
-      });
-    }, trigger);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section className="bg-background-primary py-20 lg:py-[120px] overflow-hidden">
       <div className="container">
@@ -107,45 +76,11 @@ const ExpertiseDetails = () => {
             }}>Expertise</span>
         </h2>
 
-        {/* ScrollTrigger Wrapper */}
-        <div ref={triggerRef} className="w-full relative h-auto lg:h-[70vh] flex items-center">
-          {/* Moving Container */}
-          <div ref={sectionRef} className="flex flex-col lg:flex-row w-full lg:w-max h-auto lg:h-full items-center gap-12 lg:gap-16 px-2 md:px-0">
-            {expertiseData.map((service, index) => (
-              <div
-                key={index}
-                className="expertise-item w-full lg:w-screen flex-shrink-0 px-4 md:px-12 lg:px-24 box-border h-auto lg:h-full flex items-center justify-center"
-              >
-                <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-8 items-center bg-white/5 rounded-2xl p-8 lg:p-10 border border-white/10 backdrop-blur-sm">
-                  {/* Content Column */}
-                  <div>
-                    <h4 className="flex items-center text-2xl md:text-4xl font-semibold text-white mb-8">
-                      <span className="relative inline-block h-6 w-6 shrink-0 rounded-full border-2 border-dotted border-primary mr-4">
-                        <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary"></span>
-                      </span>
-                      {service.title}
-                    </h4>
-                    <ul className="space-y-6 font-urbanist pl-0 lg:pl-10">
-                      {service.items.map((item, itemIndex) => (
-                        <ExpertiseListItem key={itemIndex}>{item}</ExpertiseListItem>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Image Column */}
-                  <div className="hidden lg:block relative h-[250px] md:h-[400px] lg:h-[400px] w-full rounded-xl overflow-hidden group">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Infinite Menu Section */}
+        <div className="h-[600px] w-full rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
+          <InfiniteMenu items={menuItems} />
         </div>
+
       </div>
     </section>
   );

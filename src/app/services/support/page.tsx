@@ -7,7 +7,7 @@ export default function SupportPage() {
       <HeaderNavigation />
       <main className="container py-32">
         <h1 className="text-5xl font-bold mb-6">
-          <span className="text-primary">Support</span> Services
+          <span className="text-primary">Support</span>
         </h1>
         <p className="text-lg text-muted-foreground">
           Reliable and responsive support to ensure your business runs smoothly.
