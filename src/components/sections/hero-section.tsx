@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Particles from "../ui/particles";
 import GlareHover from "../ui/glare-hover";
-import SplineViewer from "../ui/spline-viewer";
+import SolarSystem from "../ui/solar-system";
 
 const HeroSection = () => {
   const designDevIcons = [
@@ -34,7 +34,7 @@ const HeroSection = () => {
     <section
       className="relative text-white pt-64 lg:pt-60 lg:pb-40 xl:pt-96 xl:pb-72 overflow-x-clip min-h-screen"
       style={{
-        background: "radial-gradient(80% 60% at 50% 0%, #F2E9FF 0%, #C9A6FF 25%, #8B5CF6 45%, #5B21B6 65%, #000000 100%)",
+        // background: "radial-gradient(80% 60% at 50% 0%, #F2E9FF 0%, #C9A6FF 25%, #8B5CF6 45%, #5B21B6 65%, #000000 100%)",
         paddingTop: 'calc(var(--spacing, 1rem) * 52)',
         paddingBottom: 'calc(var(--spacing, 1rem) * 30)',
       }}
@@ -53,9 +53,9 @@ const HeroSection = () => {
         />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:w-1/2 xl:w-1/2 gap-x-12 gap-y-16 overflow-visible">
+        <div className="grid lg:grid-cols-2 gap-x-12 gap-y-16 items-center">
           <div className="relative z-10">
-            <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em]">
+            <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em]" style={{ width: '130%' }}>
               Empowering <span style={{
                 background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))',
                 WebkitBackgroundClip: 'text',
@@ -92,7 +92,10 @@ const HeroSection = () => {
             </p>
           </div>
 
+          <div className="relative z-10 hidden lg:block">
+            <SolarSystem />
           </div>
+        </div>
       </div>
     </section>
   );

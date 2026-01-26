@@ -6,45 +6,22 @@ const expertiseData = [
   {
     title: "Digital Marketing",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    items: [
-      "Search Engine Optimization (SEO)",
-      "Social Media Marketing",
-      "Pay-Per-Click (PPC) Advertising",
-      "Content Marketing",
-      "Analytics and Data-driven Insights",
-      "Google My Business",
-    ],
   },
   {
     title: "Website Design & Development",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2372&auto=format&fit=crop",
-    items: [
-      "Responsive Website Design",
-      "Custom Website Development",
-      "E-commerce Solutions",
-      "CMS Website development",
-      "Website Maintenance and Support",
-      "SEO Integration",
-    ],
+
   },
   {
     title: "Graphic Design",
     image: "https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2370&auto=format&fit=crop",
-    items: [
-      "Brochure/Flyer Design",
-      "Package Design",
-      "Graphic Design",
-      "Powerpoint Presentation",
-      "Social Media Graphics",
-      "Web Design",
-    ],
   },
 ];
 
 const menuItems = expertiseData.map(service => ({
   image: service.image,
   title: service.title,
-  description: service.items[0], // Using first item as a short description
+  description: service.description,
   link: "#"
 }));
 
