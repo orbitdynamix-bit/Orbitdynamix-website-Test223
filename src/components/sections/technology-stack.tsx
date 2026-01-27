@@ -28,7 +28,7 @@ const technologies: Technology[] = [
 
 const TechnologyStack = () => {
   return (
-    <section className="bg-background-light py-20 lg:py-24" style={{ backgroundColor: 'var(--color-background-primary)' }}>
+    <section className="bg-background-light py-20 lg:py-24" style={{ backgroundColor: '#000000' }}>
       <div className="container">
         <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12 lg:mb-16">
           <span className="text-white">Technology</span> <span className="text-accent-red animate-gradient" style={{ background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>We</span> <span className="text-white">Use</span>

@@ -6,15 +6,17 @@ const expertiseData = [
   {
     title: "Digital Marketing",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    description: "Results-driven digital marketing strategies.",
   },
   {
     title: "Website Design & Development",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2372&auto=format&fit=crop",
-
+    description: "Custom web solutions for your business.",
   },
   {
     title: "Graphic Design",
     image: "https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2370&auto=format&fit=crop",
+    description: "Creative visual identities and branding.",
   },
 ];
 
@@ -40,7 +42,7 @@ const ExpertiseListItem = ({ children }: { children: React.ReactNode }) => (
 
 const ExpertiseDetails = () => {
   return (
-    <section className="bg-background-primary py-20 lg:py-[120px] overflow-hidden">
+    <section className="bg-background-primary py-20 lg:py-[120px] overflow-hidden" style={{ backgroundColor: '#000000' }}>
       <div className="container">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 text-white font-display">
           Our <span

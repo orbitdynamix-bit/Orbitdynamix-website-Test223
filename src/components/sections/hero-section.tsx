@@ -55,7 +55,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-x-12 gap-y-16 items-center">
           <div className="relative z-10">
-            <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em]" style={{ width: '130%' }}>
+            <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em] w-full lg:w-[130%]">
               Empowering <span style={{
                 background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))',
                 WebkitBackgroundClip: 'text',

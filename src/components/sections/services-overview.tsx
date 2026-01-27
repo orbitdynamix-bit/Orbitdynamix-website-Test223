@@ -138,7 +138,7 @@ const ServiceCard = ({ icon, title, description, link, techIcons }: Service) => 
 
 const ServicesOverview = () => {
   return (
-    <section className="bg-background-primary py-24">
+    <section className="bg-background-primary py-24" style={{ backgroundColor: '#000000' }}>
       <div className="container mx-auto px-5">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 text-text-primary-dark">
           Our <span

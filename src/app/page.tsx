@@ -26,7 +26,7 @@ export default function Home() {
         <PortfolioShowcase />
 
         <TestimonialsSection />
-        <ContactSection />
+        {/* <ContactSection /> */}
 
       </main>
       <Footer />
