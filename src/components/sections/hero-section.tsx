@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
@@ -55,17 +56,50 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-x-12 gap-y-16 items-center">
           <div className="relative z-10">
-            <h1 className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em] w-full lg:w-[130%]">
-              Empowering <span style={{
-                background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-                className="animate-gradient"
-              >Business</span> with Digital Excellence
-            </h1>
-            <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-6">
+            <motion.h1
+              className="text-[48px] sm:text-[60px] lg:text-[72px] font-extrabold leading-[1.1] tracking-[-0.02em] w-full lg:w-[130%]"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
+                className="block"
+              >
+                Empowering
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+                className="block"
+              >
+                <span style={{
+                  background: 'radial-gradient(circle at 30% 30%, rgb(201, 166, 255), rgb(123, 92, 255), rgb(91, 33, 182))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+                  className="animate-gradient"
+                >
+                  Business
+                </span>
+                &nbsp;with Digital
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                className="block"
+              >
+                Excellence
+              </motion.span>
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              className="mt-8 sm:mt-10 flex flex-wrap items-center gap-6"
+            >
               <GlareHover
                 borderRadius="8px"
                 glareColor="#ffffff"
@@ -86,10 +120,15 @@ const HeroSection = () => {
                   <ArrowUpRight size={20} />
                 </Link>
               </GlareHover>
-            </div>
-            <p className="mt-12 text-white font-urbanist text-base lg:text-lg xl:text-xl font-medium max-w-lg leading-relaxed tracking-wide">
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              className="mt-12 text-white font-urbanist text-base lg:text-lg xl:text-xl font-medium max-w-lg leading-relaxed tracking-wide"
+            >
               We are a passionate team dedicated to building impactful digital experiences through innovative design, custom development, and strategic branding solutions.
-            </p>
+            </motion.p>
           </div>
 
           <div className="relative z-10 hidden lg:block">
