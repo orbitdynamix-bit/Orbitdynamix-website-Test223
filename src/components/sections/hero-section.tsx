@@ -25,10 +25,10 @@ const HeroSection = () => {
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/onqanet.technologies" },
-    { name: "Twitter", icon: Twitter, href: "https://x.com/onqanet_X" },
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/onqanet_technologies/" },
-    { name: "Linkedin", icon: Linkedin, href: "https://www.linkedin.com/company/onqanettechnologiespvtltd/" },
+    { name: "Facebook", icon: Facebook, href: "#" },
+    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Linkedin", icon: Linkedin, href: "#" },
   ];
 
   return (

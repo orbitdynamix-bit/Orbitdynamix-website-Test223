@@ -14,7 +14,7 @@ const App = () => {
           About <span className="text-primary">Us</span>
         </h1>
         <p className="text-lg text-muted-foreground">
-          Learn more about Onqanet Technologies and our mission.
+          Learn more about OrbitDynamix and our mission.
         </p>
 
         <div className="text-center mb-16">

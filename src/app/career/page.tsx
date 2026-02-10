@@ -13,7 +13,7 @@ const App = () => {
           <span className="text-primary">Career</span> Opportunities
         </h1>
         <p className="text-lg text-muted-foreground">
-          Join our team and grow with Onqanet Technologies.
+          Join our team and grow with OrbitDynamix.
         </p>
 
         <div className="text-center mb-16 mt-16">

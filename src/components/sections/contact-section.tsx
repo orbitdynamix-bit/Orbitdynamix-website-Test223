@@ -49,7 +49,7 @@ const ContactSection = () => {
                             <div className="flex items-center gap-2">
                                 <Mail className="w-6 h-6 text-[#1A1A1A] shrink-0" />
                                 <a
-                                    href="mailto:sales@onqanet.com"
+                                    href="mailto:official@orbitdynamix.com"
                                     className="text-sm font-urbanist text-gray-600 hover:text-primary transition-colors"
                                 >
                                     official@orbitdynamix.com
